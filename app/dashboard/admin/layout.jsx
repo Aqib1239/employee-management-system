@@ -29,7 +29,7 @@ const AdminLayout = ({ children }) => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-slate-100">
       <Sidebar />
       <main className="lg:pl-64">
         <div className="p-6 lg:p-8 bg-slate-100 text-black">{children}</div>

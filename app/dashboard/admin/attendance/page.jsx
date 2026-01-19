@@ -10,7 +10,7 @@ import { Clock, Users, AlertCircle, CheckCircle } from "lucide-react";
 const AttendancePage = () => {
   const [view, setView] = useState("daily");
 
-  const todayAttendance = mockAttendance.filter((a) => a.date === "2025-01-17");
+  const todayAttendance = mockAttendance.filter((a) => a.date === "2026-01-17");
 
   const columns = [
     {
@@ -158,10 +158,10 @@ const AttendancePage = () => {
                 )}
                 {Array.from({ length: 31 }, (_, i) => {
                   const date = i + 1;
-                  const dayOfWeek = new Date(2025, 0, date).getDay();
+                  const dayOfWeek = new Date(2026, 0, date).getDay();
                   const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
                   const hasAttendance = mockAttendance.some(
-                    (a) => a.date === `2025-01-${String(date).padStart(2, "0")}`
+                    (a) => a.date === `2026-01-${String(date).padStart(2, "0")}`
                   );
                   return (
                     <div

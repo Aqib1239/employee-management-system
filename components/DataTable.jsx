@@ -33,7 +33,7 @@ const DataTable = ({ columns, data, emptyMessage = "No data available" }) => {
               data.map((row) => (
                 <tr
                   key={row.id}
-                  className="border-b border-gray-300 shadow-sm hover:bg-secondary/50"
+                  className="border-b border-gray-300 shadow-sm hover:bg-gray-50"
                 >
                   {columns.map((column, index) => (
                     <td key={index} className={`text-sm p-4 ${column.className || ""}`}>

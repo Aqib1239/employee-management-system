@@ -12,7 +12,7 @@ const TeamAttendancePage = () => {
   const teamAttendance = getTeamAttendance("2");
   const teamMembers = getEmployeesByManager("2");
 
-  const todayAttendance = teamAttendance.filter((a) => a.date === "2025-01-17");
+  const todayAttendance = teamAttendance.filter((a) => a.date === "2026-01-17");
 
   const columns = [
     {

@@ -1,36 +1,98 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Employee Management System (UI)
 
-First, run the development server:
+A role-based **Employee Management System** built using **Next.js (App Router)**.  
+This project demonstrates core HR workflows such as attendance tracking, leave management, salary views, and role-based dashboards for **Admin**, **Team Lead**, and **Employee**.
+
+The application focuses on **clean architecture, role-based navigation, reusable components, and responsive UI**, using mock data and client-side state management.
+
+---
+
+## 🚀 Features
+
+### Authentication (UI Only)
+- Login screen
+- Role-based redirection
+- Protected dashboard routes
+
+### Role-Based Dashboards
+
+#### Admin Dashboard
+- Attendance overview
+- Calendar view
+- Employee management
+- Leave approvals
+- Salary overview
+
+#### Team Lead Dashboard
+- Team attendance
+- Team calendar
+- Team leave approvals
+- Team members list
+
+#### Employee Dashboard
+- Personal attendance tracking
+- Leave application & history
+- Salary details
+- Personal calendar view
+
+---
+
+## 🧱 Tech Stack
+
+- **Next.js 14 (App Router)**
+- **React**
+- **Tailwind CSS**
+- **Context API** (Auth management)
+- **Mock data**
+
+---
+
+## 📂 Project Folder Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+├── app/
+│   ├── dashboard/
+│   │   ├── admin/
+│   │   │   ├── attendance/page.jsx
+│   │   │   ├── calendar/page.jsx
+│   │   │   ├── employee/page.jsx
+│   │   │   ├── leave/page.jsx
+│   │   │   ├── salary/page.jsx
+│   │   │   ├── layout.jsx
+│   │   │   └── page.jsx
+│   │   │
+│   │   ├── employee/
+│   │   │   ├── attendance/page.jsx
+│   │   │   ├── calendar/page.jsx
+│   │   │   ├── leave/page.jsx
+│   │   │   ├── salary/page.jsx
+│   │   │   ├── layout.jsx
+│   │   │   └── page.jsx
+│   │   │
+│   │   ├── team-lead/
+│   │   │   ├── attendance/page.jsx
+│   │   │   ├── calendar/page.jsx
+│   │   │   ├── leave/page.jsx
+│   │   │   ├── team/page.jsx
+│   │   │   ├── layout.jsx
+│   │   │   └── page.jsx
+│
+├── components/
+│   ├── DataTable.jsx
+│   ├── LoginForm.jsx
+│   ├── PageHeader.jsx
+│   ├── Sidebar.jsx
+│   ├── StatCard.jsx
+│   └── StatusBadge.jsx
+│
+├── context/
+│   └── AuthContext.jsx
+│
+├── data/
+│   └── mockData.js
+│
+├── lib/
+│   └── utils.js
